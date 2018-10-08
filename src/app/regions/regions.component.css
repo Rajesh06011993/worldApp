@@ -1,0 +1,16 @@
+
+.imgSize{
+    height: 20rem;
+    width: 20rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.textColor{
+    color: white;
+}
+
+.textSize{
+    font-size: 1.25rem;
+    font-style: oblique;
+}

@@ -1,0 +1,12 @@
+ .image{
+     height:100vh; 
+     width:auto;
+     background-repeat: no-repeat;
+     background-size: cover; 
+     opacity: 1;
+     } 
+
+.fsize{
+  font-size: 1.8rem;
+  font-family: 'Times New Roman', Times, serif
+}

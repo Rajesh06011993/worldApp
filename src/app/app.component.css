@@ -1,0 +1,13 @@
+.start{
+    height: 4rem;
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+.empty{
+    height: 1rem;
+}
+
+.txt-color{
+    color: #825858;
+}

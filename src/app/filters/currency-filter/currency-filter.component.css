@@ -1,0 +1,14 @@
+.textColor{
+    color: white;
+    font-size: 1.5rem;
+}
+
+.imgSize {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}
+
+.textcol{
+    color: blue;
+}

@@ -1,0 +1,33 @@
+<br>
+<div class="text-center textColor "> Language filter has been applied and below are the list of countries with Language code <i>{{language}} </i> </div>
+<br>
+
+
+<div *ngFor="let country of listByLanguage" class="d-inline-flex ">
+
+    <div class="card mb-4 mr-3 ml-4 text-center" style="width: 18rem;">
+
+        <img class="card-img-top imgSize" [src]="country.flag" alt="Card image cap">
+
+        <div class="card-body">
+            <h5 class="card-title">{{country.name}}</h5>
+            <p class="card-text"><b>Capital:</b> <i> {{country.capital}} </i> </p>
+            <p class="card-text"> <b> Subregion: </b> <i> {{country.subregion}} </i> </p>
+            <p class="card-text"> <b> Currencies: </b>
+                <i class="btn btn-link pl-2" *ngFor="let cur of country.currencies ; let first = first; let last = last" [routerLink]="['/cFilter', cur.code ]"> {{ cur.name }} {{last ? '': ', '}}  </i>                </p>
+            <p class="card-text"> <b> Languages: </b> <i class="textcol" *ngFor="let lan of country.languages ; let first = first; let last = last"> {{ lan.name }} {{last ? '': ', '}} </i>                <br>
+            </p>
+            <p class="card-text"> <b> Timezones: </b> <i *ngFor="let time of country.timezones ; let first = first; let last = last"> {{ time }} {{last ? '': ', '}} </i>                </p>
+            <a href="#" class="btn btn-primary" [routerLink]="['/cview', country.name]">View country</a>
+        </div>
+
+    </div>
+</div>
+
+<br>
+
+<div class="text-center">
+    <button type="button" class="btn btn-secondary" [routerLink]="['/regions']">Go Home</button>
+</div>
+
+<br>

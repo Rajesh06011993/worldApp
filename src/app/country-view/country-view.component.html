@@ -1,0 +1,36 @@
+<div *ngFor="let info of countryInfo" [ngStyle]="{'background-image': getUrl(info)}" class="image border border-warning">
+
+  <div class="info-block text-center ">
+    <br>
+    <b class="fsize "> {{info.name}} </b>
+    <br>
+    <br>
+    <div>
+      <div>
+        <b> Region: </b> <i class="pl-2"> {{info.region}} </i> <br>
+        <b> Sub Region: </b> <i class="pl-2"> {{info.subregion}} </i> <br>
+        <b> Capital:</b> <i class="pl-2"> {{info.capital}} </i>
+      </div>
+      <br>
+
+      <div>
+        <b> Area: </b> <i class="pl-2"> {{info.area}} KM <sup>2</sup> </i> <br>
+        <b> Population: </b> <i class="pl-2"> {{info.population}} </i> <br>
+        <b> Time Zones:</b> <i class="pl-2" *ngFor="let time of info.timezones ; let first = first; let last = last"> {{ time }} {{last ? '': ', '}} </i>        <br>
+      </div>
+      <br>
+
+      <div>
+        <b> Calling Codes: </b> <i class="pl-2" *ngFor="let cal of info.callingCodes ; let first = first; let last = last"> {{ cal }} {{last ? '': ', '}} </i><br>
+        <b> Languages: </b> <i class="pl-2 btn btn-link" *ngFor="let lan of info.languages ; let first = first; let last = last"
+          [routerLink]="['/lFilter', lan.iso639_1 ]"> {{ lan.name }} {{last ? '': ', '}} </i> <br>
+        <b> Currencies: </b> <i class="btn btn-link pl-2" *ngFor="let cur of info.currencies ; let first = first; let last = last"
+          [routerLink]="['/cFilter', cur.code ]"> {{ cur.name }} {{last ? '': ', '}}  </i>
+        <br> <b> Demonym: </b> <i class="pl-2"> {{info.demonym}} </i> <br>
+        <b> Borders </b> <i class="pl-2" *ngFor="let bor of info.borders ; let first = first; let last = last"> {{ bor }} {{last ? '': ', '}} </i>        <br>
+      </div>
+      <br>
+    </div>
+  </div>
+
+</div>
